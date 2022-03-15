@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        #heroSection {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(231, 230, 230);
+        }
+        #heroSection img {
+            vertical-align: middle;
+            padding: 30px 0;
+        }
+        #heroSection .textWrapper {
+            margin: 0 50px;
+        }
+        .textWrapper p {
+            margin: 5px 0;
+        }
+        #appWrapper {
+            background-color: rgb(90, 128, 63);
+        }
+        .hotspot { 
+            background-color: #999;
+            border-radius: 17px;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div id="heroSection">
+        <img src="./cards/joker1.png" width="90" height="135">
+        <div class="textWrapper">
+            <h1>War criminals Solitaire</h1>
+            <p>1st Prize – Joker gets free ticket to the War Criminals Court at the Hague</p>
+            <p>2nd Prize – Joker is overthrown by a friendly oligarch</p>
+            <p>3rd Prize – Joker nuked in his bunker (nobody wins)</p>
+        </div>
+        <img src="./cards/joker1.png" width="90" height="135">
+    </div>
+    <div id="appWrapper">
+        <div id="putgamehere"></div>
+    </div>
+    <script src="./cardgamecore.js" type="text/javascript"></script>
+    <script src="./solitaire.js" type="text/javascript"></script>
+    <script>
+        window.onload = function () {
+        if( !document.getElementById ) { return; } // To be nice to old browsers
+        var game1 = new solitaireGame('solitaire1',document.getElementById('putgamehere'));
+        // game1.addImagePack('mainset',[['set1','Back Set 1']],'.png',25,36,'Main set');
+        // game1.addImagePack('cardzip/h36/',[['walk','Mountain walk'],['midnightsun','Midnight sun']],'.png',25,36,'Northern Norway');
+        // game1.addImagePack('cardzip/h96/',[['bluepattern','Blue pattern'],['blue','Plain blue'],['x','Red X']],'.gif',71,96,'Once in a Lifetime');
+        // game1.addImagePack('cardzip/h135/',[['orcaspyhop34','Orca spy-hop 1'],['orcaspyhop2','Orca spy-hop 2'],['orcajump','Orca jump'],['dolphin','Dolphin'],['puffin','Puffin'],['puffingrass','Puffin lookout'],['puffingroup','Puffin group'],['lizard','Lizard'],['turtle','Turtle'],['cloud','Shroud of cloud'],['redwine','Red wine'],['horse','Horseback'],['mouldings','Mouldings']],'.png',180,270,'Orca');
+        game1.addImagePack('cards/',[
+            ['0055', 'Back']
+            // ['orcaspyhop34','Orca spy-hop 1'],
+            // ['orcaspyhop2','Orca spy-hop 2'],
+            // ['orcajump','Orca jump'],
+            // ['dolphin','Dolphin'],
+            // ['puffin','Puffin'],
+            // ['puffingrass','Puffin lookout'],
+            // ['puffingroup','Puffin group'],
+            // ['lizard','Lizard'],
+            // ['turtle','Turtle'],
+            // ['cloud','Shroud of cloud'],
+            // ['redwine','Red wine'],
+            // ['horse','Horseback'],
+            // ['mouldings','Mouldings']
+        ],'.png', 180, 270, 'Orca');
+  
+        game1.startGame();
+        }
+    </script>
+</body>
+</html>
