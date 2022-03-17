@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Berlin Sans FB Demi';
+    src: url('fonts/subset-BerlinSansFBDemi-Bold.woff2') format('woff2'),
+        url('fonts/subset-BerlinSansFBDemi-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Berlin Sans FB';
+    src: url('fonts/subset-BerlinSansFB-Reg.woff2') format('woff2'),
+        url('fonts/subset-BerlinSansFB-Reg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
