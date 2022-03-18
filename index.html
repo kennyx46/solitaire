@@ -37,6 +37,14 @@
             border-radius: 17px;
             color: transparent;
         }
+	.center-img {
+	    display: block;
+	    margin: 0 auto;
+	    
+	}
+	.text {
+	    text-align:  center;
+	}
 	</style>
 </head>
 <body>
@@ -64,8 +72,8 @@
     	    setInterval(function() {
     		if (!document.querySelector('.toast_show')) {
     	        new Toast({
-    		      title: 'Please consider contributing',
-    		      text: '<a href="https://www.gofundme.com/f/stop-doing-business-with-russia-campaign" target="_blank">Stop Doing Business With Russia Campaign</a>',
+    		      title: '<div class="text">Please consider contributing</div>',
+    		      text: '<a href="https://www.gofundme.com/f/stop-doing-business-with-russia-campaign" target="_blank"><img height="200" src="./favicon/sbwr-white.png" width="200" class="center-img"/></a>',
     		      theme: 'danger',
     		      autohide: false
     		    });
